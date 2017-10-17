@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Main menu</title>
+
+<link href="style.css" rel="stylesheet">
+  <script src="movies.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	</head>
+<body>
+
+<div class="con">
+    <form method='GET' action="/scrape">
+
+         					<select class="select-nba" name="nba"><option value="">NBA Teams</option><option value="atl">Atlanta Hawks</option><option value="bos">Boston Celtics</option><option value="bkn">Brooklyn Nets</option><option value="cha">Charlotte Hornets</option><option value="chi">Chicago Bulls</option><option value="cle">Cleveland Cavaliers</option><option value="dal">Dallas Mavericks</option><option value="den">Denver Nuggets</option><option value="det">Detroit Pistons</option><option value="gs">Golden State Warriors</option><option value="hou">Houston Rockets</option><option value="ind">Indiana Pacers</option><option value="lac">LA Clippers</option><option value="lal">Los Angeles Lakers</option><option value="mem">Memphis Grizzlies</option><option value="mia">Miami Heat</option><option value="mil">Milwaukee Bucks</option><option value="min">Minnesota Timberwolves</option><option value="no">New Orleans Pelicans</option><option value="ny">New York Knicks</option><option value="okc">Oklahoma City Thunder</option><option value="orl">Orlando Magic</option><option value="phi">Philadelphia 76ers</option><option value="phx">Phoenix Suns</option><option value="por">Portland Trail Blazers</option><option value="sac">Sacramento Kings</option><option value="sa">San Antonio Spurs</option><option value="tor">Toronto Raptors</option><option value="utah">Utah Jazz</option><option value="wsh">Washington Wizards</option></select>
+        <div class="submit-name">
+            <input class="s" type="submit" value="Enter Team(s)" />
+        </div>
+
+    </form>
+	</div>
+	<hr>
+	<h2>NBA</h2>
+	<div class="container nba">
+	<h4>Next game</h4>
+	<p id="nba-game-date" ></p>
+	<p id="nba-game-against" ></p>
+	<p id="nba-game-time" ></p>
+	</div>
+	<hr>
+	
+</body>
+</html>

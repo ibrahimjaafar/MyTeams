@@ -1,0 +1,13 @@
+
+{
+  "name"         : "MyTeams",
+  "version"      : "0.0.1",
+  "description"  : "My Team Info",
+  "main"         : "app.js",
+  "author"       : "Ibrahim",
+  "dependencies" : {
+    "express"    : "latest",
+    "request"    : "latest",
+    "cheerio"    : "latest"
+  }
+}
