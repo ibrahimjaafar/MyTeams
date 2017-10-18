@@ -9,29 +9,67 @@ var app     = express();
  });
 app.get('/scrape', function(req, res){
 var currentIndex = 1;
+var cNBAindex = 1;
   var nbateam = req.query.nba;
-  
+  var nhlteam = req.query.nhl;
     url = 'http://www.espn.com/nba/team/schedule/_/name/'+nbateam;
+	nhlURL = 'http://www.espn.com/nhl/team/schedule/_/name/'+nhlteam;
 
-  request(url, function(error, response, html){
+	request(nhlURL, function(error, response, html){
     if(!error){
       var $ = cheerio.load(html);
 
       var gamedate, gametime, against;
       var json = { gamedate : "", gametime : "", against : ""};
 	
-      $('.oddrow').filter(function(){
+      $('tr').filter(function(){
         var data = $(this);
      
 			gamedate = data.contents().first().text(); 
 			gametime = data.contents().first().next().next().text(); 
 			against = data.contents().first().next().text(); 
-	  if(currentIndex == 1){
+	  if(gametime.match(/^\d/) && (currentIndex == 1)){
+		 currentIndex = currentIndex + 1;
 		json.gamedate = gamedate ;
 		json.gametime = gametime ;
 	    json.against = against ;
 	  }
-		   currentIndex = currentIndex + 1;
+		  
+      })
+	
+    
+    }
+//replace(/\n/g,"<br >");
+
+	   fs.writeFile('views/nhl.json', JSON.stringify(json, null, 4), function(err){
+      console.log('File successfully written' + url);
+})
+	
+	 res.sendFile(__dirname+"/views/index.html");
+	 
+
+  })
+
+	request(url, function(error, response, html){
+    if(!error){
+      var $ = cheerio.load(html);
+
+      var gamedate, gametime, against;
+      var json = { gamedate : "", gametime : "", against : ""};
+	
+      $('tr').filter(function(){
+        var data = $(this);
+     
+			gamedate = data.contents().first().text(); 
+			gametime = data.contents().first().next().next().text(); 
+			against = data.contents().first().next().text(); 
+	  if(gametime.match(/^\d/) && (cNBAindex == 1)){
+		cNBAindex = cNBAindex + 1;
+		json.gamedate = gamedate ;
+		json.gametime = gametime ;
+	    json.against = against ;
+	  }
+		   
       })
 	
     

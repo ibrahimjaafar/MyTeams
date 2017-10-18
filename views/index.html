@@ -5,7 +5,7 @@
 <title>Main menu</title>
 
 <link href="style.css" rel="stylesheet">
-  <script src="movies.js"></script>
+  <script src="myteamsApp.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,8 +17,9 @@
 <div class="con">
     <form method='GET' action="/scrape">
 
-         					<select class="select-nba" name="nba"><option value="">NBA Teams</option><option value="atl">Atlanta Hawks</option><option value="bos">Boston Celtics</option><option value="bkn">Brooklyn Nets</option><option value="cha">Charlotte Hornets</option><option value="chi">Chicago Bulls</option><option value="cle">Cleveland Cavaliers</option><option value="dal">Dallas Mavericks</option><option value="den">Denver Nuggets</option><option value="det">Detroit Pistons</option><option value="gs">Golden State Warriors</option><option value="hou">Houston Rockets</option><option value="ind">Indiana Pacers</option><option value="lac">LA Clippers</option><option value="lal">Los Angeles Lakers</option><option value="mem">Memphis Grizzlies</option><option value="mia">Miami Heat</option><option value="mil">Milwaukee Bucks</option><option value="min">Minnesota Timberwolves</option><option value="no">New Orleans Pelicans</option><option value="ny">New York Knicks</option><option value="okc">Oklahoma City Thunder</option><option value="orl">Orlando Magic</option><option value="phi">Philadelphia 76ers</option><option value="phx">Phoenix Suns</option><option value="por">Portland Trail Blazers</option><option value="sac">Sacramento Kings</option><option value="sa">San Antonio Spurs</option><option value="tor">Toronto Raptors</option><option value="utah">Utah Jazz</option><option value="wsh">Washington Wizards</option></select>
-        <div class="submit-name">
+       <select class="select-nba" name="nba"><option value="">NBA Teams</option><option value="atl">Atlanta Hawks</option><option value="bos">Boston Celtics</option><option value="bkn">Brooklyn Nets</option><option value="cha">Charlotte Hornets</option><option value="chi">Chicago Bulls</option><option value="cle">Cleveland Cavaliers</option><option value="dal">Dallas Mavericks</option><option value="den">Denver Nuggets</option><option value="det">Detroit Pistons</option><option value="gs">Golden State Warriors</option><option value="hou">Houston Rockets</option><option value="ind">Indiana Pacers</option><option value="lac">LA Clippers</option><option value="lal">Los Angeles Lakers</option><option value="mem">Memphis Grizzlies</option><option value="mia">Miami Heat</option><option value="mil">Milwaukee Bucks</option><option value="min">Minnesota Timberwolves</option><option value="no">New Orleans Pelicans</option><option value="ny">New York Knicks</option><option value="okc">Oklahoma City Thunder</option><option value="orl">Orlando Magic</option><option value="phi">Philadelphia 76ers</option><option value="phx">Phoenix Suns</option><option value="por">Portland Trail Blazers</option><option value="sac">Sacramento Kings</option><option value="sa">San Antonio Spurs</option><option value="tor">Toronto Raptors</option><option value="utah">Utah Jazz</option><option value="wsh">Washington Wizards</option></select>
+       <select class="select-nba" name="nhl"><option value="">NHL Teams</option><option value="ana">Anaheim Ducks</option><option value="ari">Arizona Coyotes</option><option value="bos">Boston Bruins</option><option value="buf">Buffalo Sabres</option><option value="cgy">Calgary Flames</option><option value="car">Carolina Hurricanes</option><option value="chi">Chicago Blackhawks</option><option value="col">Colorado Avalanche</option><option value="cbj">Columbus Blue Jackets</option><option value="dal">Dallas Stars</option><option value="det">Detroit Red Wings</option><option value="edm">Edmonton Oilers</option><option value="fla">Florida Panthers</option><option value="la">Los Angeles Kings</option><option value="min">Minnesota Wild</option><option value="mtl">Montreal Canadiens</option><option value="nsh">Nashville Predators</option><option value="nj">New Jersey Devils</option><option value="nyi">New York Islanders</option><option value="nyr">New York Rangers</option><option value="ott">Ottawa Senators</option><option value="phi">Philadelphia Flyers</option><option value="pit">Pittsburgh Penguins</option><option value="sj">San Jose Sharks</option><option value="stl">St. Louis Blues</option><option value="tb">Tampa Bay Lightning</option><option value="tor">Toronto Maple Leafs</option><option value="van">Vancouver Canucks</option><option value="vgs">Vegas Golden Knights</option><option value="wsh">Washington Capitals</option><option value="wpg">Winnipeg Jets</option></select>
+	   <div class="submit-name">
             <input class="s" type="submit" value="Enter Team(s)" />
         </div>
 
@@ -32,7 +33,15 @@
 	<p id="nba-game-against" ></p>
 	<p id="nba-game-time" ></p>
 	</div>
-	<hr>
 	
+	
+	<hr>
+	<h2>NHL</h2>
+	<div class="container nhl">
+	<h4>Next game</h4>
+	<p id="nhl-game-date" ></p>
+	<p id="nhl-game-against" ></p>
+	<p id="nhl-game-time" ></p>
+	</div>
 </body>
 </html>

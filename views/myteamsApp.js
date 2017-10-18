@@ -13,4 +13,10 @@ range.on('input', function(){
 	document.getElementById("nba-game-against").innerHTML=res.against+"";
 	document.getElementById("nba-game-time").innerHTML=res.gametime+"";
 	});
+	
+	$.getJSON("nhl.json", function (res) {
+	document.getElementById("nhl-game-date").innerHTML=res.gamedate+"";
+	document.getElementById("nhl-game-against").innerHTML=res.against+"";
+	document.getElementById("nhl-game-time").innerHTML=res.gametime+"";
+	});
 }
